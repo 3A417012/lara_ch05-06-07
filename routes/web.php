@@ -39,9 +39,15 @@ Route::get('student/{student_no}/score/{subject?}', function ($student_no,$subje
 Route::pattern('student_no','3A[0-9]{6}');
 Route::pattern('subject','(國文|英文|數學|歷史|通識)');
 
-Route::get('/','HomeController@index');
+//Route::get('/','HomeController@index');
 
 Route::group(['prefix'=>'student'],function(){
 	Route::get('{student_no}', ['as'=> 'student','uses'=> 'StudentController@getStudentData']);
 	Route::get('{student_no}/score/{subject?}', ['as'=> 'student.score','uses'=> 'StudentController@getStudentScore']);
+});
+
+//Route::get('cool','cool\TestController@index');
+
+Route::group(['namespace'=>'Cool'],function(){
+	Route::get('cool','TestController@index');
 });
