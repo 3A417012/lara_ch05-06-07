@@ -40,10 +40,10 @@ Route::pattern('student_no','3A[0-9]{6}');
 Route::pattern('subject','(國文|英文|數學|歷史|通識)');
 
 Route::group(['prefix'=>'student'],function(){
-	Route::get('{student_no}', function ($student_no) {
+	Route::get('{student_no}', ['as'=> 'student','uses'=> function ($student_no) {
 		return "學號：".$student_no;
-	});
-	Route::get('{student_no}/score/{subject?}', function ($student_no,$subject = null) {
+	}]);
+	Route::get('{student_no}/score/{subject?}', ['as'=> 'student.score','uses'=> function ($student_no,$subject = null) {
 		return "學號 ".$student_no." 的 ".((is_null($subject))?"所有科目":$subject)." 成績";
-	});
+	}]);
 });
