@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('board');
 });
 
-
+Route::get('board', 'BoardController@getIndex');
 /*
 Route::get('student/{student_no}', function ($student_no) {
     return "學號：".$student_no;
