@@ -10,11 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('board');
 });
-*/
+
 
 /*
 Route::get('student/{student_no}', function ($student_no) {
@@ -37,7 +37,7 @@ Route::get('student/{student_no}/score/{subject?}', function ($student_no,$subje
 });
 */
 Route::pattern('student_no','3A[0-9]{6}');
-Route::pattern('subject','(國文|英文|數學|歷史|通識)');
+Route::pattern('subject','(國文|英文|數學)');
 
 //Route::get('/','HomeController@index');
 
