@@ -1,11 +1,11 @@
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
-			<a href="#" class="navbar-brand">
+			<a href="{{action('HomeController@index')}}" class="navbar-brand">
 				HelloLaravel
 			</a>
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="#">排行榜</a>
+					<a href="{{action('BoardController@getIndex')}}">排行榜</a>
 				</li>
 			</ul>
 		</div>

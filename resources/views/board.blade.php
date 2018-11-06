@@ -24,13 +24,13 @@
 				<tbody>
 					<tr>
 						<td>1</td>
-						<td>3A532666</td>
+						<td>s1234567890</td>
 						<td>小明</td>
 						<td>60</td>
 						<td>60</td>
 						<td>60</td>
 						<td>180</td>
-						<td><a href="<?php echo route('student',['student_no'=>'3A532666']); ?>" class="btn btn-default btn-sm">查看學生資料</a></td>
+						<td><a href="<?php echo route('student',['student_no'=>'s1234567890']); ?>" class="btn btn-default btn-sm">查看學生資料</a></td>
 					</tr>
 				</tbody>
 			</table>
